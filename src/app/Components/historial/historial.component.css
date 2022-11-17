@@ -1,0 +1,120 @@
+body {
+    background-color: #d4d4d4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .panel {
+    height: 400px;
+    background: white;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  
+  #intro {
+    height: 350px;
+  }
+  
+  #first {
+    /* Your styling here */
+  }
+  
+  #second {
+    flex-flow: row wrap-reverse;
+  }
+  
+  .panel-item {
+    width: 50vw;
+  }
+  
+  #text {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #image-first {
+    background-image: url(http://mymodernmet.com/wp/wp-content/uploads/2017/06/volkswagen-microbus-concept-7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #image-second {
+    background-image: url(http://mymodernmet.com/wp/wp-content/uploads/2017/06/volkswagen-microbus-concept-7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  .triangle-right {
+    position: relative;
+    width: 0; height: 0;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 46px solid #fff;
+    top: 50%;
+    left: 46px;
+    margin-top: -40px;
+    margin-left: -46px;
+  }
+  
+  .triangle-left {
+    position: relative;
+    width: 0; height: 0;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-right: 46px solid #fff;
+    right: 46px;
+    margin-top: -46px; margin-bottom: -46px;
+  }
+  
+  .caption {
+    font-family: "Open Sans";
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    padding: 0 10%;
+  }
+  
+  .description {
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 10%;
+  }
+  
+  hr {
+    width: 20vw;
+    height: 0;
+    border: solid 2px #CFFF8D;
+  }
+  
+  #intro hr {
+    width: 30vw;
+    border: double 1px #425F57;
+  }
+  
+  #intro {
+    background: #A8E890;
+  }
+  
+  
+  @media (max-width: 648px) {
+    .panel-item {
+      width: 100vw;
+    }
+    .triangle-left, .triangle-right {
+      display: none;
+    }
+  }

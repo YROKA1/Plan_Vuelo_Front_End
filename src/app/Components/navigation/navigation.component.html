@@ -1,0 +1,71 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="titulobar">RADER</mat-toolbar>
+
+
+    <mat-nav-list>
+      <a mat-list-item href="Mision y Vision" class="text-white"><i class="fi fi-rs-flag me-3"></i> Mision y Vision </a>
+      <a mat-list-item href="empresa" class="text-white"><i class="fi fi-rs-building me-3"></i> Empresa </a>
+      <a mat-list-item href="instituto" class="text-white"><i class="fi fi-rr-book-alt me-3"></i> Institutos </a>
+      <a mat-list-item href="consulta" class="text-white"><i class="fi fi-rr-search-alt me-3"></i> Consulta </a>
+
+      <a mat-list-item href="alerta" class="text-white"><i class="fi fi-rr-exclamation me-3"></i> Alerta </a>
+      <a mat-list-item href="historial" class="text-white"><i class="fi fi-rr-time-past me-3"></i> Historial </a>
+      <a mat-list-item href="usuarios" class="text-white"><i class="fi fi-rr-user me-3"></i> Usuarios </a>
+      <a mat-list-item href="componentes" class="text-white"><i class="fi fi-rr-trash me-3"></i> Componentes </a>
+      <a mat-list-item href="consultas" class="text-white"><i class="fi fi-rr-search me-3"></i> Consultas</a>
+    </mat-nav-list>
+
+
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <!-- inicio de navbar con bootstrap -->
+      <span class="example-spacer"></span>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+        <div>
+        </div>
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <span class="example-spacer"></span>
+            <ul class="navbar-nav">
+              
+              <li class="nav-item">
+                
+                <a href="#"><i class="fi fi-sr-bell me-4 icon"></i></a>
+
+              </li>
+
+              <li class="nav-item">
+
+                <a href="#"><i class="fi fi-sr-envelope me-4 icon"></i></a>
+
+              </li>
+
+              <li class="nav-item">
+
+                <a href="#"><i class="fi fi-sr-user me-4 icon"></i></a>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+      <!-- Fin de navbar con bootstrap -->
+
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

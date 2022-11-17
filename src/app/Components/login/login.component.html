@@ -1,0 +1,23 @@
+<body>
+	<div class="container" id="container">
+		
+			<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+				<h1>INGRESAR</h1>
+
+					<input type="text" placeholder="Usuario" formControlName="username"/>
+					<mat-error *ngIf = "loginForm.controls['username'].hasError('required')"> 
+						<strong>Requerido</strong>
+					</mat-error>
+	
+					<input type="password" placeholder="Clave" formControlName="password" />
+					<mat-error *ngIf = "loginForm.controls['password'].hasError('required')"> 
+						<strong>Requerido</strong>
+					</mat-error>
+
+				<a href="#">¿Olvidaste tu contraseña?</a>
+				<button type="submit" mat-input>Ingresar</button>
+			</form>
+	
+		
+	</div>
+</body>

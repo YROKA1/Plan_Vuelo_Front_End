@@ -12,7 +12,16 @@ export class AppComponent {
 
   constructor(public loginservice: LoginService){ }
   ngOnInit(): void {
-    if (this.loginservice.user.value != null) { 
+
+      localStorage.setItem('user', JSON.stringify({id_Usuario: 0, clave_Usuario: '', id_Perfil: 0, nombre_Usuario: ''}));
+    
+    if(localStorage.getItem('login')==null){
+      localStorage.setItem('login', 'logout');
+    }
+   
+    
+    
+    if (this.loginservice.login.value == "login") { 
       this.loginservice.login.next("login");
     } else { 
       this.loginservice.login.next("logout");

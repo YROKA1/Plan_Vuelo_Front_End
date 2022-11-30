@@ -46,13 +46,21 @@
 
               <li class="nav-item">
 
-                <a href="#"><i class="fi fi-sr-envelope me-4 icon"></i></a>
+                <a ><i class="fi fi-sr-envelope me-4 icon"></i></a>
 
               </li>
 
               <li class="nav-item">
-
-                <a href="#"><i class="fi fi-sr-user me-4 icon"></i></a>
+                
+                <div class="dropdown">
+                  <a ><i class="fi fi-sr-user me-4 icon"></i></a>
+                  <div class="dropdown-content">
+                  <a href="/empresa" onclick="Ajustes();">Ajustes</a>
+                  <a href="/empresa" type= "button" (click)="sesion()" >Cerrar Sesión</a>
+      
+                  </div>
+                </div>
+                
 
               </li>
             </ul>

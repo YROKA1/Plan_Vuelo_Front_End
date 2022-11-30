@@ -1,39 +1,67 @@
-<div id="first" class="panel">
-    <div id="text" class="panel-item">
-      <div class="caption">
-        Empresa.<hr>
-      </div>
-      
-      <div class="description">
-        Gallia est divisa in omnes tres. 
-      </div>
-    </div>
+
+<br>
+<div class="contenedor">
+  <div class="dashboard">
     
-    <div class="triangle-right"></div>
-  
-  <div id="image-first" class="panel-item"></div>
+    <mat-card-content class="card">
+      <br><br>
+      <div class="titulo-card">Clientes registrados por ciudad</div>
+      <mat-card class="grap1">
+        <div class="chart-container">
+          <canvas id="clienteCant">{{cliente}}</canvas>
+        </div>
+      </mat-card>
+    </mat-card-content>
+    <mat-card-content class="card">
+      <br><br>
+      <div class="titulo-card">Conductores registrados por ciudad</div>
+      <mat-card class="grap1">
+        <div class="chart-container">
+          <canvas id="conductorCant">{{conductor}}</canvas>
+        </div>
+      </mat-card>
+    </mat-card-content>
   </div>
-  
-  <div id="intro" class="panel">
-    <div id="text">
-      <div class="caption"> Make a big statement.<hr></div>
-      <div class="description"> Supply information and draw users in. Compel them to scroll down!</div>
-    </div>
+  <br>
+  <div class="dashboard3">
+    <mat-card-content class="card2">
+      <br><br>
+      <div class="titulo-card">Valor total vendido por mes</div>
+      <mat-card class="grap2">
+        <div class="chart-container">
+          <canvas id="ventas">{{ventas}}</canvas>
+        </div>
+      </mat-card>
+    </mat-card-content>
+    <mat-card-content class="card3">
+      <br><br>
+      <div class="titulo-card">Servicios realizados por ciudades</div>
+      <mat-card class="grap3">
+        <div class="chart-container">
+          <canvas id="serviciosCiu">{{ventas}}</canvas>
+        </div>
+      </mat-card>
+    </mat-card-content>
   </div>
-  
-  <div id="second" class="panel">
-    <div id="image-second" class="panel-item"></div> 
-    
-    <div id="text" class="panel-item">
-      <div class="caption">
-        Announcement.<hr>
-      </div>
-      <div class="triangle-left"></div>
-      
-      <div class="description">
-        Like the swarms of clustering bees that issue forever
-  in fresh bursts from the hollow in the stone.
-      </div>
-      
-    </div>
+  <br>
+  <div class="dashboard3">
+    <mat-card-content class="card3">
+      <br><br>
+      <div class="titulo-card">Tipos de mercancia transportada</div>
+      <mat-card class="grap3">
+        <div class="chart-container">
+          <canvas id="tipoMerc">{{ventas}}</canvas>
+        </div>
+      </mat-card>
+    </mat-card-content>
+    <mat-card-content class="card2">
+      <br><br>
+      <div class="titulo-card">Servicios realizados por mes</div>
+      <mat-card class="grap2">
+        <div class="chart-container">
+          <canvas id="servicios">{{ventas}}</canvas>
+        </div>
+      </mat-card>
+    </mat-card-content>
   </div>
+</div>

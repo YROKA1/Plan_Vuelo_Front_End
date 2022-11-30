@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
+import { NgChartsModule } from 'ng2-charts';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {CargarScriptsService} from './cargar-scripts.service'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -56,6 +57,7 @@ import { FormularioComponenteComponent } from './form/formulario-componente.comp
 
   ],
   imports: [
+    NgChartsModule,
     BrowserModule, 
     AppRoutingModule, 
     MatGridListModule, 
@@ -79,7 +81,9 @@ import { FormularioComponenteComponent } from './form/formulario-componente.comp
     MatFormFieldModule
     
   ],
-  providers: [],
+  providers: [
+    CargarScriptsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { PerfilModel } from 'src/app/Models/perfil-model/PerfilModel';
+import { PerfilModel } from 'src/app/Models/PerfilModel';
 
 @Injectable({
   providedIn: 'root'

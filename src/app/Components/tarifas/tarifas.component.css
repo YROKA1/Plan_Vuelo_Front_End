@@ -1,0 +1,217 @@
+.button {
+    color: white;
+      background-color: #A75D5D;
+      left: 800px;
+      position: relative;
+      top:-80px;
+      width: 200px;
+      height: 50px;
+      
+    }
+    
+    .button:hover {
+      background-color: #D3756B;
+      color: white;
+    }
+    
+    button{
+      margin: 3px;
+    }
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+    
+    body {
+      
+        border-collapse:collapse;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.42em;
+      color:#000000;
+      background-color:#e8340c;
+    }
+    
+    h1 {
+      font-size:3em; 
+      font-weight: 300;
+      line-height:1em;
+      text-align: center;
+      color: #4DC3FA;
+    }
+    
+    h2 {
+        border-collapse:collapse;
+      font-size:0.7em; 
+      font-weight: 300;
+      
+      text-align: left;
+      
+      line-height:200%;
+      margin-left: 2%;
+      padding-bottom: 3em;
+      color: #f3e9ea;
+    }
+    h3 {
+      border-collapse:collapse;
+    font-size:0.6em; 
+    font-weight: 400;
+    
+    text-align: left;
+    
+    line-height:200%;
+    margin-left: 37%;
+    padding-bottom: 2em;
+    margin-top: -92px;
+    color: #f3e9ea;
+  }
+  h4 {
+    border-collapse:collapse;
+  font-size:0.6em; 
+  font-weight: 400;
+  
+  text-align: left;
+  
+  line-height:200%;
+  margin-left: 70%;
+  padding-bottom: 2em;
+  margin-top: -176px;
+  color: #f3e9ea;
+}
+    
+    h2 a {
+        border-collapse:collapse;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #FB667A;
+      text-decoration: none;
+    }
+
+    
+    .blue { color: #21f9f5ee; }
+    .yellow { color: #FFF842; }
+    
+    .container th h1 {
+        border-collapse: transparent;
+          font-weight: bold;
+          font-size: 1em;
+      text-align: left;
+      color: #185875;
+    
+    }
+    
+    
+    
+    .container {
+      
+          border-collapse:collapse;
+          text-align: left;
+          overflow: hidden;
+          width: auto;
+          margin: 200px 200px;
+      display: table;
+      position: static;
+      color: black;
+      
+    }
+    
+    .container td{
+      background-color: #F3D5C0;
+      border-collapse:separate;
+      width: auto;
+      height: 100px;
+      padding-bottom: 2%;
+      padding-top: 2%;
+      padding-left:3%;  
+      padding-right: 2%;
+     
+    }
+    .container th {
+      background-color: #C89595;
+      box-shadow: #A45D5D -1px 1px, #A45D5D -2px 2px, #A45D5D -3px 3px, #A45D5D -4px 4px, #A45D5D -5px 5px, #A45D5D -6px 6px, #A45D5D -0px 0px;
+      
+    border-collapse:collapse;
+    width: 250px;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left:3%;  
+    padding-right: 2%;
+    
+    
+    }
+    
+    
+    
+    
+    
+    .container td:first-child {
+          color: #FB667A;
+    }
+    
+    .container tr:hover {
+     
+        color: #ffffff;
+       
+        
+        box-shadow: #A45D5D -1px 1px, #A45D5D -2px 2px, #A45D5D -3px 3px, #A45D5D -4px 4px, #A45D5D -5px 5px, #A45D5D -6px 6px, #A45D5D -0px 0px;
+        transform: translate3d(6px, -6px, 0);
+        
+        transition-delay: 0s;
+            transition-duration: 0.4s;
+            transition-property: all;
+        transition-timing-function: line;
+    }
+    
+    .container th:hover {
+      
+      box-shadow: #A45D5D -1px 1px, #A45D5D -2px 2px, #A45D5D -3px 3px, #A45D5D -4px 4px, #A45D5D -5px 5px, #A45D5D -6px 6px, #A45D5D -0px 0px;
+      color: #ffffff; 
+    }
+    
+    @media (max-width: 1000px) {
+        .container td:nth-child(4),
+    .container th:nth-child(4) {
+              display: none;
+          margin: 0 auto;
+          }
+    }
+    
+    .contenedor{
+      display: flex;
+      justify-content: center;
+      width: auto;
+      padding-top: 25px;
+      padding-bottom: 20px;
+      margin: auto auto;
+    }
+    .boton{
+      background-color: #0dabe4;   
+      margin: 60px 20px;
+    }
+    
+    .mat-editar {
+      background-color:#11c5a7;
+      color: #fff;
+  }
+  
+    .mat-guardar{
+      background-color: #ff6961;
+      color: #fff;
+      left: 150px;
+      top: 60px;
+      position: center;
+     
+    }
+  
+    .mat-borrar{
+      background-color: #ebb249;
+      color: #fff;
+      
+    }
+   
+    .filtro{
+      top:-60px;
+      position: relative;
+      left: 330px;
+      height: 20px;
+    }
+    .h2{
+      color: #0a0102;
+    }

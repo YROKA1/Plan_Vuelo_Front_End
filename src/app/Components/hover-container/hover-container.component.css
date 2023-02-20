@@ -1,0 +1,20 @@
+
+:host{
+  position: absolute;
+      top: -100%;
+      right: 0;
+      bottom:0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      
+      background: rgb(54, 176, 180);
+      display: bottom;
+      
+      text-align: start;
+      font-size: 4.5em;
+      
+  
+    
+}
+    

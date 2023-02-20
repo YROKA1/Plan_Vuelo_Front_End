@@ -1,0 +1,107 @@
+
+
+
+<div class="container">
+    
+    
+    <br>
+ 
+    <div class="filtro">
+      <mat-form-field >
+      <mat-label>Filtro</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+    </mat-form-field></div>
+ 
+  
+    <div class="mat-elevation-z11">
+      <table mat-table [dataSource]="dataSource" matSort>
+    
+      <div matColumnDef="{{disCol}}" *ngFor="let disCol of displayedColumns">
+        <div *ngIf="disCol!='acciones' && saveBtn">
+          <th mat-header-cell *matHeaderCellDef>{{disCol}}</th>
+        <td mat-cell *matCellDef="let element"  [ngStyle]="{'color':!saveBtn && disCol!='identificador'?'rgba(0, 0, 0, 0)':''}">{{element[disCol]}}
+
+          <div *ngIf="disCol!='identificador'" >
+          <mat-form-field *ngIf="!saveBtn" appearance="fill">
+            
+        </mat-form-field>
+      </div>
+      <span *ngIf="saveBtn">{{element.disCol}}</span>
+        </td>
+        
+        </div>
+        <div *ngIf="disCol=='acciones'">
+          <th mat-header-cell *matHeaderCellDef>Acciones</th>
+        <td mat-cell *matCellDef="let identificador">
+          
+        
+        
+        </td>
+        </div>
+        
+      </div>
+  
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  
+     
+      
+  
+  
+        
+     
+    </div>
+    
+  </div>
+        
+     
+  
+  
+
+
+
+
+<table >
+    <th *ngFor="let item of columnasTabla;let indice=index">
+        <tr *ngFor="let item2 of filasTabla;let indice2=index">
+       <td  > 
+        <nav  class='rect'  [ngStyle]="{'background-color':indice2+2 >=3 && contandorTabla[indice+(6*indice2)] != '0'? 'rgb(191, 177, 199)':'rgb(179, 179, 179)'  }"*ngIf="indice <=2 && (indice2+2 <=3)" >
+            {{indice2+2}} {{item}} <mat-icon>event_seat</mat-icon> 
+        </nav>
+            <nav class='rect' [ngStyle]="{'background-color':indice2+2 >=4 && indice2+2 <=12 && contandorTabla[indice+(6*indice2)] != '0'? 'rgb(179, 213, 245)':'rgb(179, 179, 179)' }" *ngIf="indice <=2 &&(indice2+2 >=4 && indice2+2 <=12)" >
+                {{indice2+2}} {{item}}  <mat-icon>event_seat</mat-icon>
+            </nav>
+                <nav  class='rect' [ngStyle]="{'background-color':indice2+2 >=4 && indice2+2 >=13 && contandorTabla[indice+(6*indice2)] != '0'? 'rgb(179, 245, 245)':'rgb(179, 179, 179)'  }"*ngIf="indice <=2 &&(indice2+2 >=13 )">
+                    {{indice2+2}} {{item}} <mat-icon>event_seat</mat-icon>
+                </nav>
+                
+        </td>
+        <td  > 
+            <nav  class='rect2'  [ngStyle]="{'background-color':indice2+2 <=3 && contandorTabla[indice+(6*indice2)] != '0'? 'rgb(191, 177, 199)':'rgb(179, 179, 179)'  }"*ngIf="indice >=3 && (indice2+2 <=3)" >
+                {{indice2+2}} {{item}} <mat-icon>event_seat</mat-icon>
+            </nav>
+                <nav class='rect2' [ngStyle]="{'background-color':indice2+2 >=4 && indice2+2 <=12 && contandorTabla[indice+(6*indice2)] != '0'? 'rgb(179, 213, 245)':'rgb(179, 179, 179)'  }" *ngIf="indice >=3 &&(indice2+2 >=4 && indice2+2 <=12)" >
+                    {{indice2+2}} {{item}} <mat-icon>event_seat</mat-icon>
+                </nav>
+                    <nav  class='rect2' [ngStyle]="{'background-color':indice2+2 >=4 && indice2+2 >=13 && contandorTabla[indice+(6*indice2)] != '0'? 'rgb(179, 245, 245)':'rgb(179, 179, 179)'  }"*ngIf="indice >=3 &&(indice2+2 >=13 )">
+                        {{indice2+2}} {{item}} <mat-icon>event_seat</mat-icon>
+                    </nav>
+                    
+            </td>
+           
+        </tr>
+    </th>
+    
+  </table>
+
+
+  

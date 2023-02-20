@@ -6,11 +6,6 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ModalService {
-
-
-
-
-
   titulo = "";
   accion = new BehaviorSubject("");
   constructor() { }

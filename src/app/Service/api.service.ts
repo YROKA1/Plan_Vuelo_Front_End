@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { PerfilModel } from '../Models/perfil-model/PerfilModel';
+import { Injectable } from '@angular/core'; 
+import { PerfilModel } from '../Models/PerfilModel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  url = 'https://localhost:7032/api/';
+  url = 'https://localhost:7052/api/';
   constructor(public http: HttpClient) { }
 //url 
 
@@ -32,14 +32,13 @@ deleteAll(controller:String){
     console.log(res);
   });
 }
+public async login(controller:string, email:String, password:String){
+  var DataResponse:PerfilModel; 
+  DataResponse = await this.http.get(this.url+controller+ "/" +email+"/" +password).toPromise().then((res:any) => res );
+  return DataResponse; 
+}
+ 
 
-
-  //login 
-  public async login(controller:string, email:String, password:String){
-    var DataResponse:PerfilModel; 
-    DataResponse = await this.http.get(this.url+controller+ "/" +email+"/" +password).toPromise().then((res:any) => res );
-    return DataResponse; 
-  }
 
 
 }

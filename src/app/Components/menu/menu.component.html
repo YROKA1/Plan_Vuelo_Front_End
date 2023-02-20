@@ -1,0 +1,78 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" [fixedInViewport]="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'side' : 'over'" [opened]="(isHandset$ | async) == true">
+      <mat-toolbar class="titulobar"> Empresa Aerea</mat-toolbar>
+  
+  
+      <mat-nav-list>
+  
+        
+        <mat-accordion color="primary">
+          <mat-expansion-panel class="panel"style="box-shadow: none">
+            <mat-expansion-panel-header style="margin-left: -12.5px">
+              <mat-panel-title> <mat-icon class="icono-3">search</mat-icon>&nbsp;Consultar Vuelos </mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item href="horarios">
+              <mat-icon class="icono">access_time</mat-icon>
+              <span >Horarios de Vuelos</span>
+            </a>
+            <a mat-list-item href="tarifas">
+              <mat-icon class="icono">monetization_on</mat-icon>
+              <span>Tarifas de Vuelos</span>
+            </a>
+            <a mat-list-item href="informacion">
+              <mat-icon class="icono">info</mat-icon>
+              <span>Información de Vuelo</span>
+            </a>
+          </mat-expansion-panel>
+        </mat-accordion>
+        <a mat-list-item href="" ><mat-panel-title > <mat-icon class="icono-2">airplanemode_active</mat-icon>&nbsp;Reservar Vuelos</mat-panel-title></a> 
+        <a mat-list-item href="compras" ><mat-panel-title > <mat-icon class="icono-2">payment</mat-icon>&nbsp;Compra de Vuelos</mat-panel-title></a> 
+        
+      </mat-nav-list>
+  
+  
+  
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      
+      <mat-toolbar color="primary">
+  
+  
+      
+  
+        <!-- inicio de navbar con bootstrap -->
+        <span class="example-spacer"></span>
+        
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+         <div>
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon class="menu">menu</mat-icon>
+          </button>
+         </div> 
+          <div>
+          </div>
+          <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="mx-auto"></div>
+              <span class="example-spacer"></span>
+              <ul class="navbar-nav">
+                
+               
+              </ul>
+            </div>
+          </div>
+          
+        </nav>
+  
+  
+  
+        <!-- Fin de navbar con bootstrap -->
+  
+      </mat-toolbar>
+      
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

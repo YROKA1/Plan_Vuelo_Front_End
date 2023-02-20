@@ -1,0 +1,10 @@
+<table>
+	<colgroup>
+		<col span="3" style="background-color:red; width: 20px">
+	</colgroup>
+	<tr *ngFor="let itemsRow of results; let j = index">
+		<td *ngFor="let varr of results; let i = index">
+            <a >{{ itemsRow[i] }}</a></td>
+		
+	</tr>
+</table>

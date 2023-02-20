@@ -1,29 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ConsultaComponent } from './Components/consulta/consulta.component';
-import { EmpresaComponent } from './Components/empresa/empresa.component';
-import { InstitutoComponent } from './Components/instituto/instituto.component';
-import { MisiVisiComponent } from './Components/misi-visi/misi-visi.component';
-import { LoginComponent } from './Components/login/login.component';
-import { AlertaComponent } from './Components/alerta/alerta.component';
-import { HistorialComponent } from './Components/historial/historial.component';
-import { UsuariosComponent } from './Components/usuarios/usuarios.component';
-import { ComponentesComponent } from './Components/componentes/componentes.component';
-import { ConsultasComponent } from './Components/consultas/consultas.component';
+import { ComprasComponent } from './Components/compras/compras.component';
+import { HorariosComponent } from './Components/horarios/horarios.component';
+import { InformacionComponent } from './Components/informacion/informacion.component';
+import { TarifasComponent } from './Components/tarifas/tarifas.component';
+import { ReactiveFormsModule } from '@angular/forms'; 
+
 
 const routes: Routes = [
   { path: ' ', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'consulta', component: ConsultaComponent },
-  { path: 'empresa', component: EmpresaComponent },
-  { path: 'instituto', component: InstitutoComponent },
-
   
-  { path: 'alerta', component: AlertaComponent },
-  { path: 'historial', component: HistorialComponent },
-  { path: 'usuarios', component: UsuariosComponent },
-  { path: 'componentes', component: ComponentesComponent },
-  { path: 'consultas', component: ConsultasComponent },
+  { path: 'horarios', component: HorariosComponent },
+  { path: 'tarifas', component: TarifasComponent },
+  { path: 'compras', component: ComprasComponent },
+  { path: 'informacion', component: InformacionComponent }
+ 
 ];
 
 @NgModule({

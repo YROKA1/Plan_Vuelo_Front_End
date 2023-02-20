@@ -1,0 +1,50 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input class="nomcomponente" matInput placeholder="Nombre del Componente" formControlName="nestado">
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input class="descomponete" matInput placeholder="Descripcion del Componente" formControlName="destado">
+  
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input class="iddispositivo" matInput placeholder="Id del dispositivo" formControlName="destado">
+            </mat-form-field>
+          </div>
+  
+          <div class="col">
+            <mat-form-field class="fill">
+              <h6>Fecha compra</h6>
+              <input class="fechacompra" matInput placeholder="Fecha" formControlName="fecha" type="date">
+            </mat-form-field>
+          </div>
+        </div>
+  
+        <div class="row">
+       
+  
+          <div class="col">
+            <mat-form-field class="fill">
+              <h6>Fin de Vida Util</h6>
+              <input class="fechavida" matInput placeholder="Fin de vida Util" formControlName="fecha" type="date">
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">Crear</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>

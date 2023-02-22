@@ -17,7 +17,6 @@ import { CargarScriptsService } from './../../cargar-scripts.service';
   
 })
 export class LoginComponent implements OnInit {
-
   loginForm= new FormGroup({
     username: new FormControl('', Validators.required), 
     password: new FormControl('', Validators.required)
@@ -41,9 +40,12 @@ export class LoginComponent implements OnInit {
    
     this.em = this.loginForm.controls["username"].value+""; 
     this.pass = this.loginForm.controls["password"].value+""; 
-
+    var splitted = this.em.split("@"); 
+    this.em = splitted[0]+"%40"+splitted[1];
     var Dataresponse:any = await (this.apiservice.login("Usuarios", this.em, this.pass))
     var user = Dataresponse[0]; 
+    console.log(Dataresponse)
+    console.log(this.em)
 
 
     if(this.em == user.NombreUsuario && this.pass == user.ClaveUsuario){

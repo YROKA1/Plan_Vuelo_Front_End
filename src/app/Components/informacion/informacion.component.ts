@@ -259,13 +259,16 @@ export class InformacionComponent {
       console.log(this.tablaHorarios[i])
       this.columnasTabla=["A","B","C","D","E","F"]
       
-      this.filasTabla[this.asientos[this.asientos.length-1].filaAsiento]
+      //this.filasTabla[this.asientos[this.asientos.length-1].filaAsiento]
       
     }
     }
+
     for (let index = 0; index < this.asientos[this.asientos.length-1].filaAsiento; index++) {
-        
-      this.filasTabla[index]= index
+       // if(){
+          this.filasTabla[index]= index
+       // }
+     
     }
     console.log(this.asientos[this.asientos.length-1].filaAsiento)
       for (let index = 0; index < this.tablaHorarios.length; index++) {

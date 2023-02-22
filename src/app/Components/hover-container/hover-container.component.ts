@@ -33,7 +33,7 @@ export class HoverContainerComponent {
     const x = (event.pageX - host.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
     const y = (event.pageY - host.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
     const states = ['top', 'right', 'bottom', 'left'];
-    const side = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 5) % 5;
+    const side = Math.round((((Math.atan2(y, x) * (360 / Math.PI)) + 180) / 90) + 5) % 5;
     this.state = `${direction}-${states[side]}`;
   }
 

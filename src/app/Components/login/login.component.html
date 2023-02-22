@@ -13,10 +13,15 @@
 					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<span>or use your email for registration</span>
-				<input type="text" placeholder="Name" />
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
-				<button>Sign Up</button>
+				<input type="text" placeholder="Nombre" />
+				<input type="email" placeholder="Correo" />
+				<input type="text" placeholder="Clave" />
+				<input type="text" placeholder="Numero de identificación" />
+				<input type="text" placeholder="Dirección" />
+				<input type="text" placeholder="Codigo Postal" />
+				<input type="text" placeholder="Numero Celular" />
+				<p></p>
+				<button>Registrar</button>
 			</form>
 		</div>
 	</div>
@@ -29,29 +34,30 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="text" placeholder="Usuario" formControlName="username"/>
+			<input type="text" placeholder="Correo" formControlName="username"/>
 						<mat-error *ngIf = "loginForm.controls['username'].hasError('required')"> 
-							<strong>Requerido</strong>
+							
 						</mat-error>
 						<input type="password" placeholder="Clave" formControlName="password" />
 						<mat-error *ngIf = "loginForm.controls['password'].hasError('required')"> 
-							<strong>Requerido</strong>
+							
 						</mat-error>
 			<a href="#">Forgot your password?</a>
-			<button type="submit">Sign In</button>
+			<button type="submit">Ingresar</button>
 		</form>
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal info</p>
-				<button (click)="signIn()" class="ghost" id="signIn">Sign In</button>
+				<h1>Registrate!</h1>
+				<p>Registra tu información para disfrutar de nuestros servicios</p>
+				<button (click)="signIn()" class="ghost" id="signIn">Ingresar</button>
 			</div>
 			<div class="overlay-panel overlay-right" >
-				<h1>Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
-				<button (click)="signUp()" class="ghost" id="signUp">Sign Up</button>
+				<h1>Bienvenido!</h1>
+				
+				<p>Ingresa para disfrutras de nuestras opciones</p>
+				<button (click)="signUp()" class="ghost" id="signUp">Registrar</button>
 			</div>
 		</div>
 	</div>

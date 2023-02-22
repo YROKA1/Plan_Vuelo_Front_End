@@ -23,6 +23,8 @@
     "@rinminase/ng-charts": "^4.3.0",
     "@swimlane/ngx-charts": "^20.1.0",
     "chart.js": "^3.9.1",
+    "form": "^0.2.4",
+    "material": "^0.5.3",
     "ng2-charts": "^4.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

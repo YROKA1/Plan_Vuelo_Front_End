@@ -40,6 +40,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './Components/login/login.component';
 
 
 
@@ -55,6 +56,7 @@ import { RouterModule } from '@angular/router';
     TarifasComponent,
     InformacionComponent,
     ReservasComponent,
+    LoginComponent
 
     
 
